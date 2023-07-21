@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>MSLFramework</name>
+   <name>My First Desktop Project</name>
    <tag></tag>
-   <UUID>661bcc53-50d1-45d1-b0da-248ab5f28321</UUID>
+   <UUID>da696052-6ed0-4376-80b7-3d8372c2b3ca</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>
@@ -25,5 +25,5 @@
       </systemFolderList>
    </sourceContent>
    <timeStampInProperties>false</timeStampInProperties>
-   <type>GENERIC</type>
+   <type>DESKTOP</type>
 </Project>
