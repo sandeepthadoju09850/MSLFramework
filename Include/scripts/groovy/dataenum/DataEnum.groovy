@@ -25,7 +25,9 @@ import internal.GlobalVariable
 enum DataFiles {
 
 	LAUNCHAPP("LaunchApp"),
-	PIINSBILLINGINFO("PI_InsBillingInfo");
+	PIINSBILLINGINFO("PI_InsBillingInfo"),
+	PIPDISCOUNTCOVERAGE("PI_PolicyDiscCov"),
+	AUTO("Auto")
 
 	private String page;
 

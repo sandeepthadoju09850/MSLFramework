@@ -13,30 +13,28 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testcase.TestCase
 import com.kms.katalon.core.testdata.TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import cucumber.api.java.en.Given
-import internal.GlobalVariable
 import customeKeyword.Customkeywords
+import internal.GlobalVariable
 import dataenum.DataFiles
 
+public class PI_PolicyDiscountCov {
 
-class PIInsBillingInfo {
-
-
-	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.PIINSBILLINGINFO.getSheetName();
-
+	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.PIPDISCOUNTCOVERAGE.getSheetName();
+	
 	private HashMap pageData;
 
-	public PIInsBillingInfo() {
-
+	public PI_PolicyDiscountCov() {
 		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestData['Test Case']);
 	}
 
-	@Given("Enter PI InsBilling Info details - (.*)")
+	@Given("Enter PI Policy Discount Coverages - (.*)")
 	def pIInsBillingInfo(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/PI_InsBillingInfo'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/PI_PolicyDiscountCoverages'), ['pageData' :pageData, 'index' :index])
 	}
 }
