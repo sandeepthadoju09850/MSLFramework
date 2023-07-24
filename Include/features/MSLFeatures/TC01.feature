@@ -5,6 +5,7 @@ Feature: Login
   
     Given Get Group and TC data <GROUP> - <TC>
     When Launch MSL Application - 1
+    Then Enter PI InsBilling Info details - 1
    
    
 

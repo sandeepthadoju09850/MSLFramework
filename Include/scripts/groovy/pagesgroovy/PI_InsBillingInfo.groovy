@@ -35,8 +35,8 @@ class PIInsBillingInfo {
 		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestData['Test Case']);
 	}
 
-	@Given("PI InsBilling Info - (.*)")
+	@Given("Enter PI InsBilling Info details - (.*)")
 	def pIInsBillingInfo(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/NewQuote'), ['pageData' :pageData, 'index' :index])
+		WebUI.callTestCase(findTestCase('Test Cases/PI_InsBillingInfo'), ['pageData' :pageData, 'index' :index])
 	}
 }

@@ -17,3 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+def strIndex = "$index"
+
+def hash_map = pageData.get(((GlobalVariable.TestData['Test Case']) + '-') + strIndex)
+
+if ((hash_map.get('IB_Agency') != null) && (hash_map.get('IB_Agency').length() > 0)) {	
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_AgencyName'), hash_map.get('IB_Agency'))
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_AgencyName'))
+	
+	}
+		
+if ((hash_map.get('IB_PolicyType') != null) && (hash_map.get('IB_PolicyType').length() > 0)) {		
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyType'))	
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyType'), hash_map.get('IB_PolicyType'))	
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_PolicyType'))
+		
+		}
+		
+if ((hash_map.get('IB_PayPlan') != null) && (hash_map.get('IB_PayPlan').length() > 0)) {
+			CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyPlan'))
+			CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Btn_PI_PolicyPlan'), hash_map.get('IB_PayPlan'))
+			CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/PI_InsBillingInfo/Sel_PI_PolicyPlan'))
+				
+				}
