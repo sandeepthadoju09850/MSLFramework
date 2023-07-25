@@ -17,3 +17,56 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+def strIndex = "$index"
+
+def hash_map = pageData.get(((GlobalVariable.TestData['Test Case']) + '-') + strIndex)
+
+CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Tab_DriverHHMember'))
+
+
+if ((hash_map.get('Driver_HHMem_LicInfoLicStatus') != null) && (hash_map.get('Driver_HHMem_LicInfoLicStatus').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Btn_DR_LI_LicenseStatus'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Sel_DR_LI_LicenseStatus',
+			[('value') : hash_map.get('Driver_HHMem_LicInfoLicStatus')]))
+}
+
+
+if ((hash_map.get('Driver_HHMem_LicInfLicNo') != null) && (hash_map.get('Driver_HHMem_LicInfLicNo').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Txt_DR_LI_LicenseNumber'),
+		hash_map.get('Driver_HHMem_LicInfLicNo'))
+}
+
+if ((hash_map.get('Driver_HHMem_Gender') != null) && (hash_map.get('Driver_HHMem_Gender').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Btn_DR_Gender'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Sel_DR_Gender',
+			[('value') : hash_map.get('Driver_HHMem_Gender')]))
+}
+
+if ((hash_map.get('Driver_HHMem_MaritalStatus') != null) && (hash_map.get('Driver_HHMem_MaritalStatus').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Btn_DR_MaritalStatus'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Sel_DR_MaritalStatus',
+			[('value') : hash_map.get('Driver_HHMem_MaritalStatus')]))
+}
+
+if ((hash_map.get('Driver_HHMem_SSN') != null) && (hash_map.get('Driver_HHMem_SSN').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Txt_DR_SocialSecurityNumber'),
+		hash_map.get('Driver_HHMem_SSN'))
+}
+
+if ((hash_map.get('Driver_HHMem_DOB') != null) && (hash_map.get('Driver_HHMem_DOB').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Txt_DR_DOB'),
+		hash_map.get('Driver_HHMem_DOB'))
+}
+
+if ((hash_map.get('Driver_HHMem_Date') != null) && (hash_map.get('Driver_HHMem_Date').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Txt_DR_V5Y_Date1'),
+		hash_map.get('Driver_HHMem_Date'))
+}
+if ((hash_map.get('Driver_HHMem_AccVio') != null) && (hash_map.get('Driver_HHMem_AccVio').length() > 0)) {
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Driver_HHMember/Txt_DR_V5Y_Violation1'),
+		hash_map.get('Driver_HHMem_AccVio'))
+}
+
