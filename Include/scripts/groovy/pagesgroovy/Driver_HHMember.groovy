@@ -47,18 +47,18 @@ import customeKeyword.Customkeywords
 import dataenum.DataFiles
 
 
-class Auto {
+class Driver_HHMember {
 
-	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.AUTO.getSheetName();
+	private String dataSheetPath = GlobalVariable.TestData['Group'] + "/" + DataFiles.DRIVERHHMEMBER.getSheetName();
 
 	private HashMap pageData;
 
-	public Auto() {
+	public Driver_HHMember() {
 		pageData = new Customkeywords().retrieveTestCaseData(dataSheetPath, GlobalVariable.TestData['Test Case']);
 	}
 
-	@Given("Enter Auto details - (.*)")
-	def auto(String index) {
-		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Auto'), ['pageData' :pageData, 'index' :index])
+	@Given("Enter Driver HH Member Details - (.*)")
+	def driver_HHMember(String index) {
+		WebUI.callTestCase(findTestCase('Test Cases/MSLScreens/Driver_HHMember'), ['pageData' :pageData, 'index' :index])
 	}
 }

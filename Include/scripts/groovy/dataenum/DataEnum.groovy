@@ -27,7 +27,8 @@ enum DataFiles {
 	LAUNCHAPP("LaunchApp"),
 	PIINSBILLINGINFO("PI_InsBillingInfo"),
 	PIPDISCOUNTCOVERAGE("PI_PolicyDiscCov"),
-	AUTO("Auto")
+	DRIVERHHMEMBER("Driver_HHMember"),
+	AUTO("Auto");
 
 	private String page;
 

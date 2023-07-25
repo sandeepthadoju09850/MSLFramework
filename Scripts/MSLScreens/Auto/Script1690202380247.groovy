@@ -22,3 +22,130 @@ def strIndex = "$index"
 def hash_map = pageData.get(((GlobalVariable.TestData['Test Case']) + '-') + strIndex)
 
 CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Tab_Auto'))
+
+if ((hash_map.get('Auto_VehInfVIN') != null) && (hash_map.get('Auto_VehInfVIN').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_VIN'), 
+        hash_map.get('Auto_VehInfVIN'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_AnnualMileage'))
+}
+
+if ((hash_map.get('Auto_VehInfType') != null) && (hash_map.get('Auto_VehInfType').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_VehicleType'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_VehicleType', 
+            [('value') : hash_map.get('Auto_VehInfType')]))
+}
+
+if ((hash_map.get('Auto_VehInfUsage') != null) && (hash_map.get('Auto_VehInfUsage').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_Usage'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_Usage', 
+            [('value') : hash_map.get('Auto_VehInfUsage')]))
+}
+
+if ((hash_map.get('Auto_VehInfAnnMil') != null) && (hash_map.get('Auto_VehInfAnnMil').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_AnnualMileage'), 
+        hash_map.get('Auto_VehInfAnnMil'))
+}
+
+if ((hash_map.get('Auto_CovBI') != null) && (hash_map.get('Auto_CovBI').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_BidilyInjury'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_BodilyInjury', 
+            [('value') : hash_map.get('Auto_CovBI')]))
+}
+
+if ((hash_map.get('Auto_CovPD') != null) && (hash_map.get('Auto_CovPD').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PropertyDamage'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_PropertyDamage', 
+            [('value') : hash_map.get('Auto_CovPD')]))
+}
+
+if ((hash_map.get('Auto_CovMedPay') != null) && (hash_map.get('Auto_CovMedPay').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_MedicalPayment'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_MedicalPayment', 
+            [('value') : hash_map.get('Auto_CovMedPay')]))
+}
+
+if ((hash_map.get('Auto_UninsMot') != null) && (hash_map.get('Auto_UninsMot').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_UninsuredMotorist'))
+
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_UninsuredMotorist', 
+            [('value') : hash_map.get('Auto_UninsMot')]))
+}
+
+if ((hash_map.get('Auto_OtherInfPrCarAutoInfBtn') != null) && (hash_map.get('Auto_OtherInfPrCarAutoInfBtn').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PriorCarrierInfo'))
+}
+
+//Windows.switchToWindowTitle('Auto Prior Carrier')
+if ((hash_map.get('Auto_PriorCar') != null) && (hash_map.get('Auto_PriorCar').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_PriorCarrier'))
+
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_PriorCarrier'),hash_map.get('Auto_PriorCar'))
+	//CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_PC_PrriorCarrier', [('value') : hash_map.get('Auto_PriorCar')]))
+}
+
+if ((hash_map.get('Auto_APCPriCarBIlimPerPerson') != null) && (hash_map.get('Auto_APCPriCarBIlimPerPerson').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_BIPerPerson'))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_BIPerPerson'),hash_map.get('Auto_APCPriCarBIlimPerPerson'))
+	
+    //CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_PC_BIPerPerson', [('value') : hash_map.get('Auto_APCPriCarBIlimPerPerson')]))
+}
+
+if ((hash_map.get('Auto_APCPriCarBIlimPerOcc') != null) && (hash_map.get('Auto_APCPriCarBIlimPerOcc').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_BIPerOccurance'))
+	CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_BIPerOccurance'),hash_map.get('Auto_APCPriCarBIlimPerOcc'))
+	
+    //CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Sel_AT_PC_BIPerOccurance', [('value') : hash_map.get('Auto_APCPriCarBIlimPerOcc')]))
+}
+
+if ((hash_map.get('Auto_APCExpDate') != null) && (hash_map.get('Auto_APCExpDate').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_PC_ExpirationDate'), 
+        hash_map.get('Auto_APCExpDate'))
+}
+
+if ((hash_map.get('Auto_APCNofYrs') != null) && (hash_map.get('Auto_APCNofYrs').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('Object Repository/MSLink/Auto/Txt_AT_PC_YearsInsured'), 
+        hash_map.get('Auto_APCNofYrs'))
+}
+
+if ((hash_map.get('Auto_APC_OK') != null) && (hash_map.get('Auto_APC_OK').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_PC_OK'))
+}
+
+//Windows.switchToWindowTitle('SECURA\'s MILE-STONe Link')
+if ((hash_map.get('Auto_UnderwritingInfo') != null) && (hash_map.get('Auto_UnderwritingInfo').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_UW_UWInfo'))
+}
+
+//Windows.switchToWindowTitle('Underwriting Information - 2018 AUDI A4 SEDAN 4D')
+if ((hash_map.get('UW_IsThisVehicleTitledInsPer') != null) && (hash_map.get('UW_IsThisVehicleTitledInsPer').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Chk_AT_UW_VehicleTitleInsuredName', 
+            [('value') : hash_map.get('UW_IsThisVehicleTitledInsPer')]))
+}
+
+if ((hash_map.get('UW_DoesVehicleHaveAdvertisingSignage') != null) && (hash_map.get('UW_DoesVehicleHaveAdvertisingSignage').length() > 
+0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Chk_AT_UW_VehicleAdvertise', 
+            [('value') : hash_map.get('UW_DoesVehicleHaveAdvertisingSignage')]))
+}
+
+if ((hash_map.get('UW_IsVechileUsedDeliveryTransporting') != null) && (hash_map.get('UW_IsVechileUsedDeliveryTransporting').length() > 
+0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Chk_AT_UW_VehicleUsedForDelivery', 
+            [('value') : hash_map.get('UW_IsVechileUsedDeliveryTransporting')]))
+}
+
+if ((hash_map.get('UW_DoYouUseThisVehicleTravel') != null) && (hash_map.get('UW_DoYouUseThisVehicleTravel').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Chk_AT_UW_VehicleUsedForTravel', 
+            [('value') : hash_map.get('UW_DoYouUseThisVehicleTravel')]))
+}
+
+if ((hash_map.get('Auto_UnderwritingInfoOK') != null) && (hash_map.get('Auto_UnderwritingInfoOK').length() > 0)) {
+    CustomKeywords.'customeKeyword.Customkeywords.click'(findWindowsObject('Object Repository/MSLink/Auto/Btn_AT_UW_OK'))
+}
+

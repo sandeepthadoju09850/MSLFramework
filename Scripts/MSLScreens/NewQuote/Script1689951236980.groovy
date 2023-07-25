@@ -38,7 +38,8 @@ if ((hash_map.get('StateButton') != null) && (hash_map.get('StateButton').length
 }
 
 if ((hash_map.get('SelectState') != null) && (hash_map.get('SelectState').length() > 0)) {
-    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('MSLink/AppLaunch/ChooseState'), hash_map.get('SelectState'))
+    CustomKeywords.'customeKeyword.Customkeywords.sendKeys'(findWindowsObject('MSLink/AppLaunch/ChooseState'), hash_map.get(
+            'SelectState'))
 
     Windows.click(findWindowsObject('MSLink/AppLaunch/listState'))
 
@@ -48,4 +49,5 @@ if ((hash_map.get('SelectState') != null) && (hash_map.get('SelectState').length
 
     Windows.click(findWindowsObject('MSLink/AppLaunch/PreFillCancel'))
 }
+
 
